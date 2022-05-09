@@ -1,0 +1,189 @@
+:root {
+    --main-color: #ff9800;
+}
+
+body {
+    font-family: "Roboto", sans-serif;
+}
+
+
+/* Start Setting Box  */
+
+.setting-box {
+    position: fixed;
+    top: 50%;
+    left: -250px;
+    min-height: 70vh;
+    width: 250px;
+    background-color: #fff;
+    z-index: 1000;
+    transition: 0.3s;
+    border-top-right-radius: 20px;
+    border-bottom-right-radius: 20px;
+    transform: translate(0, -50%);
+}
+
+.setting-box.opened {
+    left: 0;
+}
+
+.setting-box .toggle-setting {
+    font-size: 20px;
+    top: 100px;
+    background-color: #fff;
+    right: -30px;
+    position: absolute;
+    color: var(--main-color);
+    text-align: center;
+    cursor: pointer;
+    border-top-right-radius: 5px;
+    border-bottom-right-radius: 5px;
+}
+
+.setting-box .toggle-setting .fa-gear {
+    width: 30px;
+    padding: 8px 0;
+}
+
+.setting-box .option-box {
+    border-top-right-radius: 20px;
+    margin: 0;
+    background-color: #f3f3f3;
+}
+
+.setting-box .option-box h4 {
+    margin: 0;
+}
+
+.setting-box .option-box .colors-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    text-align: center;
+}
+
+.setting-box .option-box .colors-list li {
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    display: inline-block;
+    margin-left: 5px;
+    cursor: pointer;
+    opacity: 0.5;
+}
+
+.setting-box .option-box .colors-list li.active {
+    opacity: 1;
+}
+
+.setting-box .option-box .colors-list li:first-child {
+    background-color: #ff9800;
+}
+
+.setting-box .option-box .colors-list li:nth-child(2) {
+    background-color: #e91e63;
+}
+
+.setting-box .option-box .colors-list li:nth-child(3) {
+    background-color: #03a9f4;
+}
+
+.setting-box .option-box .colors-list li:nth-child(4) {
+    background-color: #3f51b5;
+}
+
+.setting-box .option-box .colors-list li:nth-child(5) {
+    background-color: #9c27b0;
+}
+
+
+/* End Setting Box  */
+
+
+/* Start landing page */
+
+.landing-page {
+    min-height: 100vh;
+    background-image: url(../imgs/05.jpg);
+    background-size: cover;
+    position: relative;
+    transition: 0.4s;
+    background-repeat: no-repeat;
+}
+
+.overlay {
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.6);
+    position: absolute;
+    z-index: 1;
+    top: 0;
+    left: 0;
+}
+
+.header-area {
+    position: relative;
+    z-index: 2;
+    color: #fff;
+    padding: 10px;
+    display: flex;
+    align-items: center;
+}
+
+.header-area .logo {
+    width: 300px;
+    font-size: 30px;
+}
+
+.header-area .links {
+    width: 100%;
+    text-align: right;
+    padding-right: 20px;
+    padding: 0;
+}
+
+.header-area .links li {
+    padding-left: 10px;
+    list-style: none;
+    display: inline-block;
+}
+
+.links li a {
+    text-decoration: none;
+    color: #fff;
+    font-size: 20px;
+    transition: 0.3s;
+}
+
+.links li a.active,
+.links li a:hover {
+    color: var(--main-color);
+}
+
+.introduction-text {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    color: #fff;
+    z-index: 3;
+}
+
+.introduction-text h1 {
+    font-size: 40px;
+    margin: 0 0 12px;
+}
+
+.introduction-text span {
+    color: var(--main-color);
+}
+
+.introduction-text p {
+    margin: 0;
+    line-height: 1.6;
+    font-size: 20px;
+}
+
+
+/* End landing page */
