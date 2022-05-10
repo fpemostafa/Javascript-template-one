@@ -1,8 +1,19 @@
 // cheek if there is Local Storage Color Option
 let mainColor = localStorage.getItem("color-option");
+
 if (mainColor !== null) {
     // Set Color on Root From LocalStorage
-    document.documentElement.style.setProperty("--main-color", localStorage.getItem("color-option"));
+    document.documentElement.style.setProperty("--main-color", mainColor);
+
+    // Remove active class From all Li elements
+    document.querySelectorAll(".colors-list li").forEach((element) => {
+        element.classList.remove("active");
+        if (element.dataset.color === mainColor) {
+            element.classList.add('active')
+        }
+    });
+
+    // add active class on color that equal to localStorage value
 } else {
     console.log("localStorage Color Property => Null");
 }
@@ -21,13 +32,27 @@ settingIcon.onclick = function() {
 const colorLi = document.querySelectorAll(".colors-list li");
 // loop On All List Items
 colorLi.forEach((li) => {
+
     // Click On every List Item
     li.addEventListener("click", (e) => {
         // Set Color on Root
-        document.documentElement.style.setProperty("--main-color", e.target.dataset.color);
+        document.documentElement.style.setProperty(
+            "--main-color",
+            e.target.dataset.color
+        );
 
         // Store Color Property On localStorage
         localStorage.setItem("color-option", e.target.dataset.color);
+
+
+
+        // remove active class from all elements 
+        e.target.parentElement.querySelectorAll(".active").forEach(
+            element => {
+                element.classList.remove('active');
+            }
+        )
+        e.target.classList.add('active')
     });
 });
 

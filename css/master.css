@@ -48,17 +48,19 @@ body {
 .setting-box .option-box {
     border-top-right-radius: 20px;
     margin: 0;
-    background-color: #f3f3f3;
+    background-color: #fafafa;
+    padding: 15px;
 }
 
 .setting-box .option-box h4 {
     margin: 0;
+    text-align: center;
 }
 
 .setting-box .option-box .colors-list {
     list-style: none;
     padding: 0;
-    margin: 0;
+    margin: 15px 0 0;
     text-align: center;
 }
 
@@ -162,6 +164,7 @@ body {
 
 .introduction-text {
     position: absolute;
+    width: 70%;
     left: 50%;
     top: 50%;
     transform: translate(-50%, -50%);
