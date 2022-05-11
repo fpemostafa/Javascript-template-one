@@ -12,9 +12,9 @@ body {
 .setting-box {
     position: fixed;
     top: 50%;
-    left: -250px;
+    left: -175px;
     min-height: 70vh;
-    width: 250px;
+    width: 175px;
     background-color: #fff;
     z-index: 1000;
     transition: 0.3s;
@@ -46,15 +46,20 @@ body {
 }
 
 .setting-box .option-box {
-    border-top-right-radius: 20px;
-    margin: 0;
-    background-color: #fafafa;
+    margin: 0 0 10px 0;
+    background-color: #f1f1f1;
     padding: 15px;
 }
 
+.setting-box .option-box.first-opt {
+    border-top-right-radius: 20px;
+}
+
 .setting-box .option-box h4 {
+    font-size: 14px;
     margin: 0;
-    text-align: center;
+    text-align: start;
+    font-weight: 300;
 }
 
 .setting-box .option-box .colors-list {
@@ -96,6 +101,31 @@ body {
 
 .setting-box .option-box .colors-list li:nth-child(5) {
     background-color: #9c27b0;
+}
+
+.setting-box .option-box .background-toggle {
+    display: flex;
+    justify-content: space-around;
+}
+
+.setting-box .option-box .background-toggle .yes,
+.setting-box .option-box .background-toggle .no {
+    color: #fff;
+    text-align: center;
+    width: 50px;
+    margin: 15px 0 0;
+    font-size: 10px;
+    font-weight: bold;
+    padding: 5px;
+    background-color: var(--main-color);
+    display: inline-block;
+    opacity: 0.5;
+    cursor: pointer;
+    border-radius: 4px;
+}
+
+.setting-box .option-box .background-toggle .active {
+    opacity: 1;
 }
 
 
