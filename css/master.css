@@ -6,6 +6,13 @@ body {
     font-family: "Roboto", sans-serif;
 }
 
+.container {
+    width: 1170px;
+    padding-left: 15px;
+    padding-right: 15px;
+    margin: auto;
+}
+
 
 /* Start Setting Box  */
 
@@ -30,14 +37,16 @@ body {
 .setting-box .toggle-setting {
     font-size: 20px;
     top: 100px;
-    background-color: #fff;
+    background-color: #ffffff;
     right: -30px;
     position: absolute;
     color: var(--main-color);
     text-align: center;
     cursor: pointer;
     border-top-right-radius: 5px;
+    box-shadow: 0px 1px 10px 0px #28262652;
     border-bottom-right-radius: 5px;
+    z-index: -1;
 }
 
 .setting-box .toggle-setting .fa-gear {
@@ -220,3 +229,43 @@ body {
 
 
 /* End landing page */
+
+
+/* Start About Us Page */
+
+.about-us {
+    padding-top: 50px;
+    padding-bottom: 50px;
+    display: flex;
+    align-items: center;
+}
+
+.about-us .info-box {
+    flex: 1;
+}
+
+.about-us .info-box h2 {
+    font-weight: bold;
+    font-size: 24px;
+    color: var(--main-color);
+    margin: 0 0 10px;
+}
+
+.about-us .info-box p {
+    line-height: 1.8;
+    color: #727272;
+    margin: 0;
+}
+
+.about-us .img-box {
+    text-align: center;
+    flex: 1;
+}
+
+.about-us .img-box img {
+    width: 350px;
+    transform: rotateY(180deg);
+}
+
+
+/* End About Us Page */
