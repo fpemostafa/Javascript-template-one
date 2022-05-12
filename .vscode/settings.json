@@ -1,3 +1,10 @@
 {
-   "cSpell.words": ["imgs", "Landingpage"]
+   "cSpell.words": [
+      "imgs",
+      "Landingpage"
+   ],
+   "editor.tokenColorCustomizations": {
+      "comments": "",
+      "textMateRules": []
+   }
 }
